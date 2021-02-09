@@ -477,6 +477,7 @@ table a, #comments a{background-color:inherit;}
 	#footer .latestimg > li:last-child{margin-bottom:0;}
 	#footer .latestimg > li img{width:auto;}
 }
+.logoimg{max-width: 50px;     margin-bottom: 10px;}
 
 @media screen and (max-width:450px){
 	#topbar > div:first-of-type ul li{display:block; margin:0 0 2px 0;}
@@ -494,4 +495,5 @@ table a, #comments a{background-color:inherit;}
 
 	.font-x2{font-size:1.6rem;}
 	.font-x3{font-size:1.8rem;}
+	.logoimg{max-width: 50%;}	
 }
