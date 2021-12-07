@@ -16,6 +16,15 @@ Licence URI: https://www.os-templates.com/template-terms
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="icon" type="image/ico" href="../images/icon.ico">
   <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+    .hide {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 1px;
+      height: 1px;
+    }
+  </style>
 </head>
 
 <body id="top">
@@ -206,7 +215,7 @@ Licence URI: https://www.os-templates.com/template-terms
               <header>
                 <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
                 <address>
-                By <a href="#">A Name</a>
+                  By <a href="#">A Name</a>
                 </address>
                 <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
               </header>
@@ -216,8 +225,10 @@ Licence URI: https://www.os-templates.com/template-terms
             </article>
           </li>
         </ul>-->
+          <iframe name="hiddenFrame" class="hide"></iframe>
           <h2>Send us a message</h2>
-          <form action="https://script.google.com/macros/s/AKfycbwlI45r1AJsJUYIynRG4fvW1FwtBjpK4X2e6eKu4iTbt5l7gs0/exec" method="post" data-email="info@itpoweconsulting.com" id="gform">
+          <form action="https://script.google.com/macros/s/AKfycbwlI45r1AJsJUYIynRG4fvW1FwtBjpK4X2e6eKu4iTbt5l7gs0/exec"
+            method="post" data-email="info@itpoweconsulting.com" id="gform" target="hiddenFrame" name="contactform">
             <div class="one_half first">
               <label for="name">Name <span>*</span></label>
               <input type="text" name="name" id="name" value="" size="22" required>
@@ -227,18 +238,26 @@ Licence URI: https://www.os-templates.com/template-terms
               <input type="email" name="email" id="email" value="" size="22" required>
             </div>
             <!-- <div class="one_third">
-            <label for="url">Subject</label>
-            <input type="text" name="subject" id="subject" value="" size="22">
-          </div> -->
+              <label for="url">Subject</label>
+              <input type="text" name="subject" id="subject" value="" size="22">
+            </div> -->
             <div class="block clear">
               <label for="comment">Your Message</label>
               <textarea name="message" id="comment" cols="25" rows="10"></textarea>
             </div>
             <div>
-              <input type="submit" name="submit" value="Submit">
+              <input style="width: 20%;" type="button" id="SaveBtn" name="saveBtn" value="Send" onclick="submitForm()">
               <!-- &nbsp;
-            <input type="reset" name="reset" value="Reset Form"> -->
+                <input type="reset" name="reset" value="Reset Form"> -->
             </div>
+            <script>
+              function submitForm() {
+                document.contactform.submit();
+                document.getElementById("name").value = '';
+                document.getElementById("email").value = '';
+                document.getElementById("comment").value = '';
+              }
+            </script>
           </form>
         </div>
         <!-- ################################################################################################ -->
@@ -290,9 +309,11 @@ Licence URI: https://www.os-templates.com/template-terms
             </li>
           </ul>
           <ul class="faico clear">
-            <li><a class="faicon-facebook" target="_blank" href="https://www.facebook.com/it.power.consulting.LTD1"><i class="fab fa-facebook"></i></a></li>
+            <li><a class="faicon-facebook" target="_blank" href="https://www.facebook.com/it.power.consulting.LTD1"><i
+                  class="fab fa-facebook"></i></a></li>
             <!-- <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li> -->
-            <li><a class="faicon-linkedin" target="_blank" href="https://www.linkedin.com/company/it-power-consulting"><i class="fab fa-linkedin"></i></a></li>
+            <li><a class="faicon-linkedin" target="_blank"
+                href="https://www.linkedin.com/company/it-power-consulting"><i class="fab fa-linkedin"></i></a></li>
             <!-- <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li> -->
             <!-- <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li> -->
           </ul>
